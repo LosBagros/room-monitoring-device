@@ -30,6 +30,8 @@ If you still want to manufacture it. Just upload content of `pcb` folder to your
 7. Build and upload project to your board.
 8. Done. LEDs should light up.
 
+Sensor sends data over MQTT. You can use my other [project](https://github.com/LosBagros/iot-platform).
+
 ## Case
 
 Case was designed by [Jakub Lips](https://www.instagram.com/__li_po_/)
