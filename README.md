@@ -15,7 +15,7 @@
 
 ## Manufacturing
 
-<span style="color: red; font-weight: bold">⚠️ Warning: Do not manufacture my PCB design. Step-down and ESP is heating the board resulting with wrong temperature measurement. It needs to be redesigned!</span>
+**⚠️ Warning: Do not manufacture my PCB design. Step-down and ESP is heating the board resulting with wrong temperature measurement. It needs to be redesigned!**
 
 If you still want to manufacture it. Just upload content of `pcb` folder to your favorite PCB manufacturer. I used [JLCPCB](https://jlcpcb.com/).
 
