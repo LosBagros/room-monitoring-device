@@ -52,6 +52,6 @@ Case was designed by [Jakub Lips](https://www.instagram.com/__li_po_/)
 
 ## License
 
-[MIT](./LICENSE)
+[WTFPL](./LICENSE)
 
 Libraries used in this project are licensed under their respective licenses.
