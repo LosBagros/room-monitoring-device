@@ -1,6 +1,6 @@
 # Room Monitoring Device Manual
 
-Link to Czech version: [CZ](manual_cz.md)
+Link to [Czech version](manual_cz.md)
 
 This document provides setup instructions and usage guidelines for the **Room Monitoring Device**, which continuously measures **CO₂ concentration**, **temperature**, and **humidity** in indoor environments.
 

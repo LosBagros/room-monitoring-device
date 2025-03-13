@@ -1,5 +1,7 @@
 # Manuál zařízení pro monitorování místnosti
 
+Odkaz na [Anglickou verzi](manual.md)
+
 Postup pro instalaci a používání zařízení **Room Monitoring Device**, které měří **koncentraci CO₂**, **teplotu** a **vlhkost vzduchu** v místnosti.
 
 ## ⚠️ Důležité bezpečnostní upozornění
