@@ -1,30 +1,54 @@
-# Lorem Ipsum Manual
+# 📘 Room Monitoring Device Manual
 
-## Lorem Ipsum
+This document provides setup instructions and usage guidelines for the **Room Monitoring Device**, which continuously measures **CO₂ concentration**, **temperature**, and **humidity** in indoor environments.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## ⚠️ Important Safety Notice
 
-## Dolor Sit Amet
+> **Do not leave the device unattended for long periods in critical environments.**
+>
+> Although the device has been stable and reliable in practice, **it is a custom electronic device and there is no absolute guarantee against hardware failure or fire risk**.
+>
+> Always place the device on a **non-flammable surface**, keep it **away from flammable materials**, and **periodically monitor its operation**.
+>
+> **Use only 5V USB-C power adapters**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-Vestibulum euismod, nisi vel consectetur interdum, nisl nisi tincidunt turpis, a tincidunt eros orci vel justo.  
-Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum. Tristique magna sit amet purus gravida quis.
+## Setup Instructions
 
-## Consectetur Adipiscing
+### 1. Power Supply
 
-- Lorem ipsum dolor sit amet  
-- Consectetur adipiscing elit  
-- Tempor incididunt ut labore  
-- Dolore magna aliqua  
+- Use a stable **5V USB-C power source** (standard phone charger with USB-C output).
+- Ensure uninterrupted power for continuous monitoring and reliable data transmission.
 
-## Ut Enim Ad Minim Veniam
+### 2. Wi-Fi Connectivity
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  
+- Place the device **close to your Wi-Fi router** to ensure strong and stable signal strength.
+- Ensure your Wi-Fi network operates on the **2.4 GHz band**. The device does not support 5 GHz Wi-Fi networks.
+- When first powered on, the device will create a Wi-Fi hotspot named `RoomMonitor AP` with password `12345678`.
+- Open captive portal by connecting to the hotspot and visiting `http://192.168.4.1` in a web browser.
+- Enter your **Wi-Fi SSID** and **password** to connect the device to your Wi-Fi network.
 
-## Excepteur Sint Occaecat
+### 3. Placement Recommendations
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- Position the device at **typical room height**, away from:
+  - Direct sunlight
+  - Heating/cooling vents
+  - Windows and doors
+- Avoid enclosing the device in tight spaces to allow free airflow around the sensors.
+
+## Live Data Dashboard
+
+[**Dashboard link**](https://iot.bagros.eu/d/be7hw0wxuy1vkc/co2?orgId=1&from=now-3h&to=now&timezone=browser&kiosk)
+
+The dashboard provides:
+
+- **CO₂ concentration (ppm)**
+- **Room temperature (°C)**
+- **Relative humidity (%)**
+
+## Air Quality Interpretation
+
+| Indicator   | CO₂ Level (ppm)   | Description               | Action                          |
+| ----------- | ----------------- | ------------------------- | ------------------------------- |
+| 🟢 Good     | `< 1000 ppm`      | Air quality is acceptable | No action needed                |
+| 🟡 Moderate | `1000 - 2000 ppm` | Air quality is degrading  | Increase ventilation            |
+| 🔴 Poor     | `> 2000 ppm`      | Air quality is unhealthy  | Immediately improve ventilation |
