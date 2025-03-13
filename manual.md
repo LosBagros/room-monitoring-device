@@ -1,16 +1,18 @@
 # Room Monitoring Device Manual
 
+Link to Czech version: [CZ](manual_cz.md)
+
 This document provides setup instructions and usage guidelines for the **Room Monitoring Device**, which continuously measures **CO₂ concentration**, **temperature**, and **humidity** in indoor environments.
 
 ## ⚠️ Important Safety Notice
 
-> **Do not leave the device unattended for long periods in critical environments.**
+> **Do not leave the device unattended.**
 >
 > Although the device has been stable and reliable in practice, **it is a custom electronic device and there is no absolute guarantee against hardware failure or fire risk**.
 >
 > Always place the device on a **non-flammable surface**, keep it **away from flammable materials**, and **periodically monitor its operation**.
 >
-> **Use only 5V USB-C power adapters**
+> **Use only 5V power adapters**
 
 ## Setup Instructions
 
@@ -35,7 +37,7 @@ This document provides setup instructions and usage guidelines for the **Room Mo
   - Windows and doors
 - Avoid enclosing the device in tight spaces to allow free airflow around the sensors.
 
-## Live Data Dashboard
+## Live Dashboard
 
 [**Dashboard link**](https://iot.bagros.eu/d/be7hw0wxuy1vkc/co2?orgId=1&from=now-3h&to=now&timezone=browser&kiosk)
 
