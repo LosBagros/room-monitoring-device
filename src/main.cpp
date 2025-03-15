@@ -1,64 +1,46 @@
 // TODO: Change LED behavior
-#include <BH1750.h>
-#include <Adafruit_NeoPixel.h>
+#include <BH1750.h>            // https://github.com/claws/BH1750
+#include <Adafruit_NeoPixel.h> // https://github.com/adafruit/Adafruit_NeoPixel
 #include <Arduino.h>
-#include <SensirionI2CScd4x.h>
-#include "Adafruit_SHT4x.h"
+#include <SensirionI2CScd4x.h> // https://github.com/Sensirion/arduino-i2c-scd4x
+#include "Adafruit_SHT4x.h"    // https://github.com/adafruit/Adafruit_SHT4X
 #include <WiFi.h>
-#include <PubSubClient.h>
-#include <ArduinoJson.h>
+#include <PubSubClient.h> // https://github.com/knolleary/PubSubClient
+#include <ArduinoJson.h>  // https://github.com/bblanchon/ArduinoJson
 #include <Wire.h>
 #include <SPI.h>
-#include <time.h>
+#include <WiFiManager.h> //https://github.com/hraph/ESP32WiFiManager/ WiFi Configuration Magic
 
 #include <secret.h>
 
-#define PIN 7
+#define DEV_BOARD
+
+#ifdef DEV_BOARD
+#define LED_PIN 8
+#define NUMPIXELS 1
+#define SDA 2
+#define SCL 1
+#else
+#define LED_PIN 7
 #define NUMPIXELS 2
 #define SDA 5
 #define SCL 6
+#endif
 
 char mqttTopic[50];
 
 WiFiClient espClient;
 PubSubClient mqttClient(espClient);
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, LED_PIN, NEO_GRB + NEO_KHZ800);
 Adafruit_SHT4x sht4 = Adafruit_SHT4x();
 SensirionI2CScd4x scd4x;
-// TODO: Light sensor is not visible in I2C
-
-void SetupTime()
-{
-  configTime(gmtOffset_sec, daylightOffset_sec, "pool.ntp.org");
-  setenv("TZ", Timezone, 1);
-  tzset();
-  delay(100);
-}
-
-int getCurrentHour()
-{
-  time_t now = time(NULL);
-  if (now == -1)
-    return -1;
-  struct tm *currentTime = localtime(&now);
-  return currentTime->tm_hour;
-}
+#ifdef DEV_BOARD
+BH1750 lightMeter;
+#endif
 
 void setColor(uint8_t r, uint8_t g, uint8_t b)
 {
-  int hour = getCurrentHour();
-
-  if (!enableLedsInNight && hour != -1 && (hour > sleepHour || hour < wakeupHour))
-  {
-    for (int i = 0; i < NUMPIXELS; i++)
-    {
-      strip.setPixelColor(i, strip.Color(r / 255, g / 255, b / 255));
-    }
-    strip.show();
-    return;
-  }
-
   for (int i = 0; i < NUMPIXELS; i++)
   {
     strip.setPixelColor(i, strip.Color(r, g, b));
@@ -89,41 +71,9 @@ void fadeSingleColor(uint8_t r, uint8_t g, uint8_t b, uint8_t maxBrightness)
   }
 }
 
-void connectToWiFi()
-{
-  if (WiFi.status() == WL_CONNECTED)
-  {
-    return;
-  }
-  WiFi.mode(WIFI_STA);
-  WiFi.setTxPower(WIFI_POWER_5dBm);
-  WiFi.begin(ssid, password);
-  Serial.print("Connecting to WiFi ..");
-  int counter = 0;
-  while (WiFi.status() != WL_CONNECTED)
-  {
-    fadeSingleColor(0, 0, 255, 100);
-    delay(500);
-    Serial.print(".");
-    counter++;
-    if (counter > 30)
-    {
-      Serial.println("Failed to connect to WiFi");
-      ESP.restart();
-    }
-  }
-  Serial.println("\nConnected to the WiFi network");
-  Serial.print("IP Address: ");
-  Serial.println(WiFi.localIP());
-  Serial.print("RSSI: ");
-  Serial.print(WiFi.RSSI());
-  Serial.println(" dBm");
-}
-
 int mqttTries = 0;
 void connectToMQTTBroker()
 {
-  connectToWiFi();
   mqttTries = 0;
   while (!mqttClient.connected())
   {
@@ -154,17 +104,36 @@ void setup()
 {
   Serial.begin(115200);
   strip.begin();
+  setColor(10, 10, 10);
 
-  connectToWiFi();
-  SetupTime();
+  WiFi.mode(WIFI_STA);
+
+#ifndef DEV_BOARD
+  WiFi.setTxPower(WIFI_POWER_5dBm);
+#endif
+
+  WiFiManager wm;
+
+  bool res;
+  res = wm.autoConnect("RoomMonitorAP", "12345678"); // password protected ap
+  if (!res)
+  {
+    Serial.println("Failed to connect");
+  }
 
   Wire.begin(SDA, SCL);
 
+#ifdef DEV_BOARD
+  lightMeter.begin();
+#endif
+
   if (!sht4.begin())
   {
-    Serial.println("Couldn't find SHT4x");
     while (1)
-      delay(1);
+    {
+      Serial.println("Couldn't find SHT4x");
+      delay(1000);
+    }
   }
   sht4.setPrecision(SHT4X_HIGH_PRECISION);
   sht4.setHeater(SHT4X_NO_HEATER);
@@ -200,6 +169,7 @@ float co2Humidity = 0.0f;
 uint16_t error = 0;
 char errorMessage[256];
 bool isDataReady = false;
+float lux = 0;
 
 StaticJsonDocument<256> jsonDoc;
 
@@ -266,7 +236,14 @@ void loop()
   Serial.print(" Read duration (ms): ");
   Serial.print(timestamp);
   Serial.println();
+#ifdef DEV_BOARD
+  lux = lightMeter.readLightLevel();
+  Serial.print("Light: ");
+  Serial.print(lux);
+  Serial.println(" lx");
   Serial.println();
+
+#endif
 
   if (co2 > 2000)
   {

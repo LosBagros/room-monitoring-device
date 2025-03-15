@@ -25,7 +25,7 @@ This document provides setup instructions and usage guidelines for the **Room Mo
 
 - Place the device **close to your Wi-Fi router** to ensure strong and stable signal strength.
 - Ensure your Wi-Fi network operates on the **2.4 GHz band**. The device does not support 5 GHz Wi-Fi networks.
-- When first powered on, the device will create a Wi-Fi hotspot named `RoomMonitor AP` with password `12345678`.
+- When first powered on, the device will create a Wi-Fi hotspot named `RoomMonitorAP` with password `12345678`.
 - Open captive portal by connecting to the hotspot and visiting `http://192.168.4.1` in a web browser.
 - Enter your **Wi-Fi SSID** and **password** to connect the device to your Wi-Fi network.
 

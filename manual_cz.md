@@ -25,7 +25,7 @@ Postup pro instalaci a používání zařízení **Room Monitoring Device**, kte
 
 - Umístěte zařízení **blízko Wi-Fi routeru**, aby bylo zajištěno silné a stabilní připojení.
 - Ujistěte se, že vaše Wi-Fi síť funguje na frekvenci **2.4 GHz**. Zařízení **nepodporuje 5 GHz sítě**.
-- Po zapnutí zařízení vytvoří vlastní Wi-Fi síť s názvem `RoomMonitor AP` a heslem `12345678`.
+- Po zapnutí zařízení vytvoří vlastní Wi-Fi síť s názvem `RoomMonitorAP` a heslem `12345678`.
 - Připojte se k této síti a otevřete prohlížeč na adrese `http://192.168.4.1`.
 - Zadejte název vaší Wi-Fi sítě (SSID) a heslo pro připojení zařízení do vaší domácí sítě.
 
