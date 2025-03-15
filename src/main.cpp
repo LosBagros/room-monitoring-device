@@ -13,7 +13,7 @@
 
 #include <secret.h>
 
-#define DEV_BOARD
+#define DEV_BOARD // comment if using custom PCB
 
 #ifdef DEV_BOARD
 #define LED_PIN 8
@@ -46,29 +46,6 @@ void setColor(uint8_t r, uint8_t g, uint8_t b)
     strip.setPixelColor(i, strip.Color(r, g, b));
   }
   strip.show();
-}
-
-void fadeSingleColor(uint8_t r, uint8_t g, uint8_t b, uint8_t maxBrightness)
-{
-  if (maxBrightness < 0)
-  {
-    return;
-  }
-  if (maxBrightness > 255)
-  {
-    maxBrightness = 255;
-  }
-  for (int brightness = 0; brightness <= maxBrightness; brightness += 10)
-  {
-    setColor((r * brightness) / 255, (g * brightness) / 255, (b * brightness) / 255);
-    delay(100);
-  }
-
-  for (int brightness = maxBrightness; brightness >= 0; brightness -= 10)
-  {
-    setColor((r * brightness) / 255, (g * brightness) / 255, (b * brightness) / 255);
-    delay(100);
-  }
 }
 
 int mqttTries = 0;
@@ -197,7 +174,7 @@ void loop()
   if (!isDataReady)
   {
     Serial.println("Data not ready yet");
-    fadeSingleColor(255, 100, 0, 100);
+    setColor(0, 0, 100);
     delay(1000);
     return;
   }
@@ -247,15 +224,15 @@ void loop()
 
   if (co2 > 2000)
   {
-    setColor(255, 0, 0);
+    setColor(100, 0, 0);
   }
   else if (co2 > 1000)
   {
-    setColor(255, 100, 0);
+    setColor(100, 50, 0);
   }
   else if (co2 < 1000 && co2 > 1)
   {
-    setColor(0, 255, 0);
+    setColor(0, 100, 0);
   }
   if (co2 <= 0)
   {
@@ -268,7 +245,9 @@ void loop()
     connectToMQTTBroker();
   }
 
-  // jsonDoc["light"] = round(lux * 100) / 100.0; // NOTE: Light sensor is not working
+#ifdef DEV_BOARD
+  jsonDoc["light"] = round(lux * 100) / 100.0;
+#endif
   jsonDoc["temperature"] = round(temp.temperature * 100) / 100.0;
   jsonDoc["humidity"] = round(hum.relative_humidity * 100) / 100.0;
   jsonDoc["co2"] = co2;

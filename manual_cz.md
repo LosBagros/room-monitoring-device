@@ -31,7 +31,7 @@ Postup pro instalaci a používání zařízení **Room Monitoring Device**, kte
 
 ### 3. Doporučené umístění
 
-- Umístěte zařízení ve výšce běžné pro pobyt osob, dále od:
+- Umístěte zařízení mimo:
   - Přímého slunečního světla
   - Topných nebo chladicích jednotek
   - Oken a dveří
