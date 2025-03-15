@@ -18,20 +18,20 @@ This document provides setup instructions and usage guidelines for the **Room Mo
 
 ### 1. Power Supply
 
-- Use a stable **5V USB-C power source** (standard phone charger with USB-C output).
+- Use a stable 5V USB-C power source (standard phone charger with USB-C output).
 - Ensure uninterrupted power for continuous monitoring and reliable data transmission.
 
 ### 2. Wi-Fi Connectivity
 
-- Place the device **close to your Wi-Fi router** to ensure strong and stable signal strength.
-- Ensure your Wi-Fi network operates on the **2.4 GHz band**. The device does not support 5 GHz Wi-Fi networks.
+- Place the device close to your Wi-Fi router to ensure strong and stable signal strength.
+- Ensure your Wi-Fi network operates on the 2.4 GHz band. The device does not support 5 GHz Wi-Fi networks.
 - When first powered on, the device will create a Wi-Fi hotspot named `RoomMonitorAP` with password `12345678`.
 - Open captive portal by connecting to the hotspot and visiting `http://192.168.4.1` in a web browser.
-- Enter your **Wi-Fi SSID** and **password** to connect the device to your Wi-Fi network.
+- Enter your Wi-Fi SSID and password to connect the device to your Wi-Fi network.
 
 ### 3. Placement Recommendations
 
-- Position the device at **typical room height**, away from:
+- Position the device at typical room height, away from:
   - Direct sunlight
   - Heating/cooling vents
   - Windows and doors
@@ -47,10 +47,12 @@ The dashboard provides:
 - **Room temperature (°C)**
 - **Relative humidity (%)**
 
-## Air Quality Interpretation
+## LED Indicator
 
-| Indicator   | CO₂ Level (ppm)   | Description               | Action                          |
-| ----------- | ----------------- | ------------------------- | ------------------------------- |
-| 🟢 Good     | `< 1000 ppm`      | Air quality is acceptable | No action needed                |
-| 🟡 Moderate | `1000 - 2000 ppm` | Air quality is degrading  | Increase ventilation            |
-| 🔴 Poor     | `> 2000 ppm`      | Air quality is unhealthy  | Immediately improve ventilation |
+| LED Color                | CO₂ Level (ppm)   | Action                             |
+| ------------------------ | ----------------- | ---------------------------------- |
+| 🟢 Good                  | `< 1000 ppm`      | No action needed                   |
+| 🟡 Moderate              | `1000 - 2000 ppm` | Increase ventilation               |
+| 🔴 Poor                  | `> 2000 ppm`      | Immediately improve ventilation    |
+| 🔵 Sensor not ready      | `N/A`             | Waiting for CO₂ sensor to warmup   |
+| ⚪ Not connected to wifi | `N/A`             | Wifi is not configured / connected |

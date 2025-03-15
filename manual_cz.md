@@ -18,13 +18,13 @@ Postup pro instalaci a používání zařízení **Room Monitoring Device**, kte
 
 ### 1. Napájení
 
-- Použijte stabilní **5V USB-C napájecí zdroj** (např. nabíječka pro mobilní telefon).
+- Použijte stabilní 5V USB-C napájecí zdroj (např. nabíječka pro mobilní telefon).
 - Zajistěte nepřerušované napájení pro spolehlivý provoz a přenos dat.
 
 ### 2. Připojení k Wi-Fi
 
-- Umístěte zařízení **blízko Wi-Fi routeru**, aby bylo zajištěno silné a stabilní připojení.
-- Ujistěte se, že vaše Wi-Fi síť funguje na frekvenci **2.4 GHz**. Zařízení **nepodporuje 5 GHz sítě**.
+- Umístěte zařízení blízko Wi-Fi routeru, aby bylo zajištěno silné a stabilní připojení.
+- Ujistěte se, že vaše Wi-Fi síť funguje na frekvenci 2.4 GHz. Zařízení nepodporuje 5 GHz sítě.
 - Po zapnutí zařízení vytvoří vlastní Wi-Fi síť s názvem `RoomMonitorAP` a heslem `12345678`.
 - Připojte se k této síti a otevřete prohlížeč na adrese `http://192.168.4.1`.
 - Zadejte název vaší Wi-Fi sítě (SSID) a heslo pro připojení zařízení do vaší domácí sítě.
@@ -47,10 +47,12 @@ Dashboard zobrazuje:
 - **Teplotu místnosti (°C)**
 - **Relativní vlhkost vzduchu (%)**
 
-## Interpretace kvality vzduchu
+## LED Indikace
 
-| Indikátor  | Hladina CO₂ (ppm) | Popis                    | Doporučená akce                 |
-| ---------- | ----------------- | ------------------------ | ------------------------------- |
-| 🟢 Dobrá   | `< 1000 ppm`      | Kvalita vzduchu je dobrá | Není třeba podnikat žádné kroky |
-| 🟡 Střední | `1000 - 2000 ppm` | Kvalita se zhoršuje      | Zvýšit větrání                  |
-| 🔴 Špatná  | `> 2000 ppm`      | Kvalita je nezdravá      | Okamžitě zlepšit větrání        |
+| Barva LED                | Hladina CO₂ (ppm) | Akce                                     |
+| ------------------------ | ----------------- | ---------------------------------------- |
+| 🟢 Dobrá                 | `< 1000 ppm`      | Není potřeba žádná akce                  |
+| 🟡 Střední               | `1000 - 2000 ppm` | Zvýšit větrání                           |
+| 🔴 Špatná                | `> 2000 ppm`      | Okamžitě zlepšit větrání                 |
+| 🔵 Senzor nepřipraven    | `N/A`             | Čekání na zahřátí CO₂ senzoru            |
+| ⚪ Není připojeno k WiFi | `N/A`             | WiFi není nakonfigurováno nebo připojeno |
