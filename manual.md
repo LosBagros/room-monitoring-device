@@ -64,34 +64,34 @@ The dashboard provides:
 <table>
     <tr>
         <td align="center">
-            <img src="./img/icons/microwave-off.svg" width="100px;" style="filter: invert(1);" alt="Microwave icon" />
+            <img src="./img/icons/microwave-off.svg" width="100px;" alt="Microwave icon" />
             <br />
             <sub><b>Do not microwave the device</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/bucket-droplet.svg" width="100px;" style="filter: invert(1);" alt="Water icon" />
+            <img src="./img/icons/bucket-droplet.svg" width="100px;" alt="Water icon" />
             <br />
             <sub><b>Do not expose to water</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/flame.svg" width="100px;" style="filter: invert(1);" alt="Flammable icon" />
+            <img src="./img/icons/flame.svg" width="100px;" alt="Flammable icon" />
             <br />
             <sub><b>Do not place near flammable materials</b></sub>
         </td>
     </tr>
     <tr>
         <td align="center">
-            <img src="./img/icons/gavel.svg" width="100px;" style="filter: invert(1);" alt="Hammer" />
+            <img src="./img/icons/gavel.svg" width="100px;" alt="Hammer" />
             <br />
             <sub><b>Do not test durability with a hammer</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/bolt.svg" width="100px;" style="filter: invert(1);" alt="Power icon" />
+            <img src="./img/icons/bolt.svg" width="100px;" alt="Power icon" />
             <br />
             <sub><b>Do not use a power source other than 5V</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/paw-off.svg" width="100px;" style="filter: invert(1);" alt="Power icon" />
+            <img src="./img/icons/paw-off.svg" width="100px;" alt="Power icon" />
             <br />
             <sub><b>Do not let pets monitor the air	</b></sub>
         </td>
