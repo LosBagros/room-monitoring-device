@@ -50,6 +50,15 @@ Case was designed by [Jakub Lips](https://www.instagram.com/__li_po_/)
 - https://www.svgrepo.com/svg/162992/mall-wifi-sign - CC0
 - https://www.svgrepo.com/svg/64380/diagonal-arrow - CC0
 
+[Tabler icons](https://tabler.io/icons/)
+
+- microwave-off
+- bucket-droplet
+- flame
+- bolt
+- gavel
+- paw-off
+
 ## License
 
 [WTFPL](./LICENSE)

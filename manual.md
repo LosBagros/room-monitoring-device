@@ -23,7 +23,7 @@ This document provides setup instructions and usage guidelines for the **Room Mo
 
 ### 2. Wi-Fi Connectivity
 
-- Place the device close to your Wi-Fi router to ensure strong and stable signal strength.
+- Place the device close to your Wi-Fi router to ensure strong and stable signal strength. Ideally in the same room as the router.
 - Ensure your Wi-Fi network operates on the 2.4 GHz band. The device does not support 5 GHz Wi-Fi networks.
 - When first powered on, the device will create a Wi-Fi hotspot named `RoomMonitorAP` with password `12345678`.
 - Open captive portal by connecting to the hotspot and visiting `http://192.168.4.1` in a web browser.
@@ -56,3 +56,46 @@ The dashboard provides:
 | 🔴 Poor                  | `> 2000 ppm`      | Immediately improve ventilation    |
 | 🔵 Sensor not ready      | `N/A`             | Waiting for CO₂ sensor to warmup   |
 | ⚪ Not connected to wifi | `N/A`             | Wifi is not configured / connected |
+
+## DO NOT
+
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+    <tr>
+        <td align="center">
+            <img src="./img/icons/microwave-off.svg" width="100px;" style="filter: invert(1);" alt="Microwave icon" />
+            <br />
+            <sub><b>Do not microwave the device</b></sub>
+        </td>
+        <td align="center">
+            <img src="./img/icons/bucket-droplet.svg" width="100px;" style="filter: invert(1);" alt="Water icon" />
+            <br />
+            <sub><b>Do not expose to water</b></sub>
+        </td>
+        <td align="center">
+            <img src="./img/icons/flame.svg" width="100px;" style="filter: invert(1);" alt="Flammable icon" />
+            <br />
+            <sub><b>Do not place near flammable materials</b></sub>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <img src="./img/icons/gavel.svg" width="100px;" style="filter: invert(1);" alt="Hammer" />
+            <br />
+            <sub><b>Do not test durability with a hammer</b></sub>
+        </td>
+        <td align="center">
+            <img src="./img/icons/bolt.svg" width="100px;" style="filter: invert(1);" alt="Power icon" />
+            <br />
+            <sub><b>Do not use a power source other than 5V</b></sub>
+        </td>
+        <td align="center">
+            <img src="./img/icons/paw-off.svg" width="100px;" style="filter: invert(1);" alt="Power icon" />
+            <br />
+            <sub><b>Do not let pets monitor the air	</b></sub>
+        </td>
+    </tr>
+</table>
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->

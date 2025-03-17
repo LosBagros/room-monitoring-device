@@ -23,7 +23,7 @@ Postup pro instalaci a používání zařízení **Room Monitoring Device**, kte
 
 ### 2. Připojení k Wi-Fi
 
-- Umístěte zařízení blízko Wi-Fi routeru, aby bylo zajištěno silné a stabilní připojení.
+- Umístěte zařízení blízko Wi-Fi routeru, aby bylo zajištěno silné a stabilní připojení. Nejlépe ve stejné místnosti jako je router.
 - Ujistěte se, že vaše Wi-Fi síť funguje na frekvenci 2.4 GHz. Zařízení nepodporuje 5 GHz sítě.
 - Po zapnutí zařízení vytvoří vlastní Wi-Fi síť s názvem `RoomMonitorAP` a heslem `12345678`.
 - Připojte se k této síti a otevřete prohlížeč na adrese `http://192.168.4.1`.
@@ -56,3 +56,46 @@ Dashboard zobrazuje:
 | 🔴 Špatná                | `> 2000 ppm`      | Okamžitě zlepšit větrání                 |
 | 🔵 Senzor nepřipraven    | `N/A`             | Čekání na zahřátí CO₂ senzoru            |
 | ⚪ Není připojeno k WiFi | `N/A`             | WiFi není nakonfigurováno nebo připojeno |
+
+## Varování
+
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+    <tr>
+        <td align="center">
+            <img src="./img/icons/microwave-off.svg" width="100px;" style="filter: invert(1);" alt="Mikrovlnná trouba ikona" />
+            <br />
+            <sub><b>Nedávejte zařízení do mikrovlnné trouby</b></sub>
+        </td>
+        <td align="center">
+            <img src="./img/icons/bucket-droplet.svg" width="100px;" style="filter: invert(1);" alt="Voda ikona" />
+            <br />
+            <sub><b>Nevystavujte vodě</b></sub>
+        </td>
+        <td align="center">
+            <img src="./img/icons/flame.svg" width="100px;" style="filter: invert(1);" alt="Hořlavé materiály ikona" />
+            <br />
+            <sub><b>Nepokládejte blízko hořlavých materiálů</b></sub>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <img src="./img/icons/gavel.svg" width="100px;" style="filter: invert(1);" alt="Kladivo ikona" />
+            <br />
+            <sub><b>Netestujte odolnost kladivem</b></sub>
+        </td>
+        <td align="center">
+            <img src="./img/icons/bolt.svg" width="100px;" style="filter: invert(1);" alt="Napájení ikona" />
+            <br />
+            <sub><b>Nepoužívejte jiný zdroj napájení než 5V</b></sub>
+        </td>
+        <td align="center">
+            <img src="./img/icons/paw-off.svg" width="100px;" style="filter: invert(1);" alt="Zvířata ikona" />
+            <br />
+            <sub><b>Nepovolujte domácím mazlíčkům monitorovat vzduch</b></sub>
+        </td>
+    </tr>
+</table>
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
