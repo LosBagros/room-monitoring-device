@@ -37,6 +37,12 @@ This document provides setup instructions and usage guidelines for the **Room Mo
   - Windows and doors
 - Avoid enclosing the device in tight spaces to allow free airflow around the sensors.
 
+## Known Issues
+
+- Temperature and humidity measurements from the PCB are affected by board self-heating, leading to inaccurate readings.
+- The light sensor does not work in this PCB version due to a schematic design mistake.
+- Wi-Fi antenna is weak, which may result in unstable connectivity if the device is far from the router.
+
 ## Live Dashboard
 
 [**Dashboard link**](https://iot.bagros.eu/d/be7hw0wxuy1vkc/co2?orgId=1&from=now-3h&to=now&timezone=browser&kiosk)

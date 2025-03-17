@@ -37,6 +37,12 @@ Postup pro instalaci a používání zařízení **Room Monitoring Device**, kte
   - Oken a dveří
 - Zajistěte volný proud vzduchu kolem zařízení — neumisťujte jej do uzavřených prostor.
 
+## Známé problémy
+
+- Měření teploty a vlhkosti z PCB je ovlivněno zahříváním desky, což vede k nepřesným hodnotám.
+- Světelný senzor nefunguje v této verzi PCB kvůli chybě v návrhu schématu.
+- Wi-Fi anténa je slabá, což může vést k nestabilnímu připojení, pokud je zařízení daleko od routeru.
+
 ## Online Dashboard
 
 [**Odkaz na Dashboard**](https://iot.bagros.eu/d/be7hw0wxuy1vkc/co2?orgId=1&from=now-3h&to=now&timezone=browser&kiosk)
