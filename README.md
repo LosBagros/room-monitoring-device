@@ -15,7 +15,7 @@
 
 ## Manufacturing
 
-**⚠️ Warning: Do not manufacture my PCB design. Step-down and ESP is heating the board resulting with wrong temperature measurement. It needs to be redesigned!**
+**⚠️ Warning: Do not manufacture my PCB design. Step-down and ESP is heating the board resulting with wrong temperature measurement. There are some issues with RF matching resulting in weak wifi connection. PCB should to be redesigned in future!**
 
 If you still want to manufacture it. Just upload content of `pcb` folder to your favorite PCB manufacturer. I used [JLCPCB](https://jlcpcb.com/).
 
@@ -30,11 +30,16 @@ If you still want to manufacture it. Just upload content of `pcb` folder to your
 7. Build and upload project to your board.
 8. Done. LEDs should light up.
 
-Sensor sends data over MQTT. You can use my other [project](https://github.com/LosBagros/iot-platform).
+Sensor sends data over MQTT. It's in separate [repository](https://github.com/LosBagros/iot-platform).
+
+## Manuals
+
+- [CZ manual](manual_cz.md)
+- [EN manual](manual.md)
 
 ## Case
 
-Case was designed by [Jakub Lips](https://www.instagram.com/__li_po_/)
+3D Case was designed by [Jakub Lips](https://www.instagram.com/__li_po_/)
 
 ## Images
 
