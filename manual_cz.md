@@ -40,7 +40,7 @@ Postup pro instalaci a používání zařízení **Room Monitoring Device**, kte
 ## Známé problémy
 
 - Měření teploty a vlhkosti z PCB je ovlivněno zahříváním desky, což vede k nepřesným hodnotám.
-- Světelný senzor nefunguje v této verzi PCB kvůli chybě v návrhu schématu.
+- Senzor světla nefunguje v této verzi PCB kvůli chybě v návrhu schématu.
 - Wi-Fi anténa je slabá, což může vést k nestabilnímu připojení, pokud je zařízení daleko od routeru.
 
 ## Online Dashboard
