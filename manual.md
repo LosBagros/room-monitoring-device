@@ -45,7 +45,7 @@ This document provides setup instructions and usage guidelines for the **Room Mo
 
 ## Live Dashboard
 
-[**Dashboard link**](https://iot.bagros.eu/d/be7hw0wxuy1vkc/co2?orgId=1&from=now-3h&to=now&timezone=browser&kiosk)
+[**IOT.BAGROS.EU**](https://iot.bagros.eu/d/be7hw0wxuy1vkc/co2?orgId=1&from=now-3h&to=now&timezone=browser&kiosk)
 
 The dashboard provides:
 

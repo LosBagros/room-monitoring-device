@@ -45,7 +45,7 @@ Postup pro instalaci a používání zařízení **Room Monitoring Device**, kte
 
 ## Online Dashboard
 
-[**Odkaz na Dashboard**](https://iot.bagros.eu/d/be7hw0wxuy1vkc/co2?orgId=1&from=now-3h&to=now&timezone=browser&kiosk)
+[**IOT.BAGROS.EU**](https://iot.bagros.eu/d/be7hw0wxuy1vkc/co2?orgId=1&from=now-3h&to=now&timezone=browser&kiosk)
 
 Dashboard zobrazuje:
 
