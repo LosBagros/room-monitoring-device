@@ -1,0 +1,41 @@
+OBSAH PAMĚŤOVÉHO MÉDIA
+
+1) ROOM-MONITORING-DEVICE
+Projekt zařízení pro monitorování prostředí místnosti založený na čipu ESP32 (C3 nebo C6).
+
+Obsah:
+- 3d/ ...................... 3D modely a výkresy krabičky
+- pcb/ ..................... Podklady pro výrobu DPS (BOM, Pick&Place, Gerber)
+- src/ ..................... Zdrojový kód zařízení (main.cpp, secret.h)
+- firmware_esp32_c3.bin .... Kompilovaný firmware pro ESP32-C3
+- firmware_esp32_c6.bin .... Kompilovaný firmware pro ESP32-C6
+- platformio.ini ........... Konfigurace PlatformIO projektu
+- manual.md / manual_cz.md . Uživatelské příručky
+- README.md ................ Přehled projektu
+
+Postup programování zařízení:
+1. Nainstalujte rozšíření PlatformIO do vašeho IDE (např. VSCode).
+2. Naklonujte repozitář projektu.
+3. Otevřete složku projektu v IDE.
+4. Přejmenujte `src/secret.h.example` na `src/secret.h`.
+5. Vyplňte údaje: MQTT a identifikátor senzoru.
+6. Připojte vývojovou desku k PC.
+7. Sestavte a nahrajte firmware do desky.
+8. Hotovo – LEDky na zařízení by měly indikovat aktivitu.
+
+2) IOT-PLATFORM
+Docker-based platforma pro komunikaci s MQTT zařízeními a sběr dat přes Telegraf.
+
+Obsah:
+- docker-compose.yml ....... Definice služeb
+- .env.example ............. Ukázkový konfigurační soubor proměnných
+- mosquitto/config/ ........ Konfigurace MQTT brokera (mosquitto.conf, hesla)
+- telegraf.conf ............ Konfigurace pro sběr metrik
+- architecture.png ......... Vizualizace architektury systému
+- README.md ................ Popis a použití platformy
+
+Postup nasazení:
+1. Vytvořte MQTT uživatele:   docker run -it --rm -v ./mosquitto/:/mosquitto/ eclipse-mosquitto mosquitto_passwd -c /mosquitto/config/passwords <uživatelské_jméno>
+2. Zkopírujte .env: mv .env.example .env
+3. Nastavte prostředí: vi .env
+4. Spusťte platformu: docker compose up -d

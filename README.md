@@ -25,7 +25,7 @@ If you still want to manufacture it. Just upload content of `pcb` folder to your
 2. Clone this repository.
 3. Open this project in your IDE.
 4. Rename `src/secret.example.h` to `src/secret.h`
-5. Fill in wifi and mqtt credentials and sensor id.
+5. Fill in mqtt credentials and sensor id.
 6. Connect board to your computer.
 7. Build and upload project to your board.
 8. Done. LEDs should light up.
