@@ -54,9 +54,6 @@ void connectToMQTTBroker()
   mqttTries = 0;
   while (!mqttClient.connected())
   {
-    Serial.print("RSSI: ");
-    Serial.print(WiFi.RSSI());
-    Serial.println(" dBm");
     Serial.print("Connecting to MQTT...");
     mqttClient.setServer(mqttServer, mqttPort);
     if (mqttClient.connect(sensorId, mqttUser, mqttPassword))

@@ -70,34 +70,34 @@ Dashboard zobrazuje:
 <table>
     <tr>
         <td align="center">
-            <img src="./img/icons/microwave-off.svg" width="100px;" alt="Mikrovlnná trouba ikona" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/microwave-off.svg" width="100px;" alt="Mikrovlnná trouba ikona" />
             <br />
             <sub><b>Nedávejte zařízení do mikrovlnné trouby</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/bucket-droplet.svg" width="100px;" alt="Voda ikona" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/bucket-droplet.svg" width="100px;" alt="Voda ikona" />
             <br />
             <sub><b>Nevystavujte vodě</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/flame.svg" width="100px;" alt="Hořlavé materiály ikona" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/flame.svg" width="100px;" alt="Hořlavé materiály ikona" />
             <br />
             <sub><b>Nepokládejte blízko hořlavých materiálů</b></sub>
         </td>
     </tr>
     <tr>
         <td align="center">
-            <img src="./img/icons/gavel.svg" width="100px;" alt="Kladivo ikona" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/gavel.svg" width="100px;" alt="Kladivo ikona" />
             <br />
             <sub><b>Netestujte odolnost kladivem</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/bolt.svg" width="100px;" alt="Napájení ikona" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/bolt.svg" width="100px;" alt="Napájení ikona" />
             <br />
             <sub><b>Nepoužívejte jiný zdroj napájení než 5V</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/paw-off.svg" width="100px;" alt="Zvířata ikona" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/paw-off.svg" width="100px;" alt="Zvířata ikona" />
             <br />
             <sub><b>Nepovolujte domácím mazlíčkům monitorovat vzduch</b></sub>
         </td>

@@ -70,34 +70,34 @@ The dashboard provides:
 <table>
     <tr>
         <td align="center">
-            <img src="./img/icons/microwave-off.svg" width="100px;" alt="Microwave icon" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/microwave-off.svg" width="100px;" alt="Microwave icon" />
             <br />
             <sub><b>Do not microwave the device</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/bucket-droplet.svg" width="100px;" alt="Water icon" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/bucket-droplet.svg" width="100px;" alt="Water icon" />
             <br />
             <sub><b>Do not expose to water</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/flame.svg" width="100px;" alt="Flammable icon" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/flame.svg" width="100px;" alt="Flammable icon" />
             <br />
             <sub><b>Do not place near flammable materials</b></sub>
         </td>
     </tr>
     <tr>
         <td align="center">
-            <img src="./img/icons/gavel.svg" width="100px;" alt="Hammer" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/gavel.svg" width="100px;" alt="Hammer" />
             <br />
             <sub><b>Do not test durability with a hammer</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/bolt.svg" width="100px;" alt="Power icon" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/bolt.svg" width="100px;" alt="Power icon" />
             <br />
             <sub><b>Do not use a power source other than 5V</b></sub>
         </td>
         <td align="center">
-            <img src="./img/icons/paw-off.svg" width="100px;" alt="Power icon" />
+            <img src="https://raw.githubusercontent.com/LosBagros/room-monitoring-device/refs/heads/main/img/icons/paw-off.svg" width="100px;" alt="Power icon" />
             <br />
             <sub><b>Do not let pets monitor the air	</b></sub>
         </td>
